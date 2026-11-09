@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Галерея фотографій</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея фотографій</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>FOTO IMAGE LIST</h1>
+  <div class="wrapper">
+    <header class="header">
+      <h1>Фотогалерея Picsum</h1>
+      <p class="desc">Практична робота з Fetch API та маніпуляціями DOM</p>
     </header>
-    <main>
-        <div id="gallery" class="gallery"></div>
-        <div class="buttons">
-            <button id="loadMore">Завантажити ще 4 картинки</button>
-            <button id="clearGallery">Очистити галерею</button>
-            <button id="removeLast">Видалити останню картинку</button>
-            <button id="reverseGallery">Перевернути галерею</button>
-            <button id="shuffleGallery">Перемішати галерею</button>
-        </div>
-    </main>
-    <script src="script.js"></script>
+
+    <!-- Основний контейнер для картинок -->
+    <main id="gallery" class="gallery"></main>
+
+    <!-- Текстове повідомлення для користувача -->
+    <p id="status-text" class="status-text"></p>
+
+    <!-- Панель з 4 обов'язковими кнопками за ТЗ -->
+    <div class="controls">
+      <button id="load-btn" class="btn btn-primary">Завантажити ще 4 картинки</button>
+      <button id="reverse-btn" class="btn btn-neutral">Перевернути галерею</button>
+      <button id="delete-btn" class="btn btn-neutral">Видалити останню картинку</button>
+      <button id="clear-btn" class="btn btn-danger">Очистити галерею</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
